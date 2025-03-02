@@ -1,3 +1,4 @@
+
 var buttons = document.getElementsByClassName("complete-btn");
 var taskCount = 0;
 var taskAssigned = 6;
@@ -81,6 +82,3 @@ function getCurrDate(){
 const [today, currDate] = getCurrDate();
 document.getElementById("curr-day").innerText = today;
 document.getElementById("curr-date").innerText = currDate;
-
-
-
