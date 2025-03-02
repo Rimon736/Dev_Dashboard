@@ -2,6 +2,22 @@ var buttons = document.getElementsByClassName("complete-btn");
 var taskCount = 0;
 var taskAssigned = 6;
 
+document.getElementById("blog-link").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "blog.html";
+  });
+
+
+document.getElementById('theme-Button').addEventListener('click', function(event){
+    
+    const colors = ["#ffb6c1", "#e6e6fa", "#87cefa", "#98fb98", "#ffffe0", "#ffdab9", "#f5fffa", "#f0fff0", "#f08080", "#ffe4e1"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById('body').style.backgroundColor = randomColor;
+
+    console.log("selected color: ", randomColor);
+  
+});
+
 
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function() {
@@ -66,23 +82,5 @@ const [today, currDate] = getCurrDate();
 document.getElementById("curr-day").innerText = today;
 document.getElementById("curr-date").innerText = currDate;
 
-document.getElementById("blog-link").addEventListener("click", function () {
-    window.location.href = "blog.html";
-  });
 
-document.getElementById("home-link").addEventListener("click", function(event){
-    event.preventDefault();
-    console.log("button clicked")
-    window.location.href = "index.html";
 
-})
-
-document.getElementById('theme-Button').addEventListener('click', function(event){
-    
-    const colors = ["#ffb6c1", "#e6e6fa", "#87cefa", "#98fb98", "#ffffe0", "#ffdab9", "#f5fffa", "#f0fff0", "#f08080", "#ffe4e1"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.getElementById('body').style.backgroundColor = randomColor;
-
-    console.log("selected color: ", randomColor);
-  
-})
