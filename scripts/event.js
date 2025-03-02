@@ -46,3 +46,21 @@ for (var i = 0; i < buttons.length; i++) {
         });
     });
 }
+
+function getCurrDate(){
+    const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    var date= new Date();
+    var day= Days[date.getDay()];
+    var month= Months[date.getMonth()];
+    var year= date.getFullYear();  
+
+    var today= `${day}`;
+    var currDate= `${date.getDate()} ${month}, ${year}`;
+
+    return [today, currDate];
+}
+const [today, currDate] = getCurrDate();
+document.getElementById("curr-day").innerText = today;
+document.getElementById("curr-date").innerText = currDate;
