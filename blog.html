@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<body class="bg-gray-100 h-[100vh]">
+    <div class="w-5/6 m-auto">
+        <nav class="bg-white m-auto rounded-[14px] p-1 px-3 py-2 flex justify-between items-center">
+            <div class="flex justify-between items-center ">
+                <img src="./assets/logo.png" alt="Devbard-Logo">
+                <h1 class="text-3xl">
+                    Dev<span class="font-bold">Board</span>
+                </h1>
+            </div>
+            <div class="flex justify-between items-center" >
+                <button class="text-white bg-[#3752FD] p-2 text-[16px] rounded-[14px]" id="home-link" >Back to Desk</button>
+            </div>        
+        </nav>
+    <h1 class="font-bold text-center text-3xl">Blog</h1>
+        <div class="collapse bg-base-100 border border-base-300 m-auto rounded-[14px] p-1 px-3 py-2 mt-2">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title font-semibold">Question-1: What are the different ways to select an element in the DOM?</div>
+            <div class="collapse-content text-sm">
+                <ol>
+                <li>getElementById("id")</li>
+                <li>getElementsByClassName("class")</li>
+                <li>getElementsByTagName("tag")</li>
+                <li>querySelector("css-selector")</li>
+                <li>querySelectorAll("css-selector")</li>
+            </ol></div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
+            <div class="collapse-content text-sm">innerHTML allows us to get or set the HTML inside an element, meaning it processes and renders any tags included. innerText only deals with the visible text, ignoring hidden elements and formatting the text as it appears on the screen. textContent retrieves or sets all text inside an element, including hidden elements, but does not parse HTML. While innerHTML is useful for injecting HTML content, innerText is better for working with visible text, and textContent is the most efficient for handling raw text.</div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">Question-3: What is event delegation in the DOM?</div>
+            <div class="collapse-content text-sm">GEvent delegation is a technique in the DOM where a parent element handles events for its child elements, even if they are added dynamically. Instead of attaching event listeners to multiple child elements, we add a single listener to a common ancestor. This works because events bubble up from the target element to its ancestors. For example, adding a click event to a -ul- and detecting clicks on its -li- items is more efficient than attaching separate listeners to each -li- This improves performance and keeps code cleaner, especially when working with dynamic content. </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">Question-4: What is event bubbling in the DOM?</div>
+            <div class="collapse-content text-sm">Event bubbling in the DOM is a process where an event starts from the target element and propagates upwards through its parent elements. When an event occurs on a child element, it first triggers on that element, then moves up to its ancestors in order until it reaches the root (document). For example, if we click a button inside a -div-, the click event first happens on the button, then bubbles up to the -div-, then to -body-, and so on. This behavior allows us to use event delegation and manage events efficiently at a higher level. </div>
+          </div>
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+            <div class="collapse-content text-sm">
+                <span class="font-semibold">Creating an element:</span>
+                
+                Use document.createElement("tag") to create a new element.
+                <br>
+                <span class="font-semibold">Adding an element:</span>
+                Use parent.appendChild(child) to add an element at the end.
+                Use parent.append(child) (modern alternative).
+                Use parent.prepend(child) to add at the beginning.
+                <br>
+                <span class="font-semibold">Removing an element:</span>
+                
+                Use element.remove() (modern way).
+                Use parent.removeChild(child) (older method).
+            </div>
+          </div>
+    </div>
+    <script src="./scripts/event.js"></script>
+</body>
+</html>
